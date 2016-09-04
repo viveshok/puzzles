@@ -8,20 +8,21 @@ Round your answer to the nearest per cent.
 
 We are dealing with a binomial distribution: n = 400, k = 1...220, p = 0.5
 
-f(k, n, p) = (n choose k) p^k (1-p)^(n-k) = ( n! / k! (n-k)! ) p^k (1-p)^(n-k)
+    f(k, n, p) = (n choose k) p^k (1-p)^(n-k) = ( n! / k! (n-k)! ) p^k (1-p)^(n-k)
 
-mean = n p
+    mean = n p
 
-variance = n p (1-p)
+    variance = n p (1-p)
 
 ### Approximation
 
 As n gets large, the binomial distribution approach the normal distribution.
-We have mean     = n p = 400 0.5 = 200
-        variance = n p (1-p) = 400 0.5 0.5 = 100
-        std dev  = sqrt(100) = 10
+We have:
+    mean     = n p = 400 0.5 = 200
+    variance = n p (1-p) = 400 0.5 0.5 = 100
+    std dev  = sqrt(100) = 10
 
-k - mean = 220 - 200 = 20 = 2 * std dev
+    k - mean = 220 - 200 = 20 = 2 * std dev
 
 from standard normal cdf table, we see that 2 std dev from mean ~= 0.47725,
 by symmetry P(X>=220) = 1 - 0.5 - 0.47725 = 0.02275
@@ -64,6 +65,7 @@ def binomial_cdf(n, k, p):
     return result
 
 print(binomial_cdf(400, 220, 0.5))
+# 0.025520
 
 ```
 
