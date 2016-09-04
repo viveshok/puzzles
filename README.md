@@ -18,6 +18,7 @@ We are dealing with a binomial distribution: n = 400, k = 1...220, p = 0.5
 
 As n gets large, the binomial distribution approach the normal distribution.
 We have:
+
     mean     = n p = 400 0.5 = 200
     variance = n p (1-p) = 400 0.5 0.5 = 100
     std dev  = sqrt(100) = 10
